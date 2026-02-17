@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+<h2>💪 AI Fitness</h2>
+<a href="index.html">Generate Plan</a>
+<a href="login.html" onclick="logout()">Logout</a>
+</nav>
+
+<div class="container">
+<h1>Your Dashboard</h1>
+
+<div id="userData"></div>
+
+<h3>Update Weekly Weight</h3>
+<input type="number" id="newWeight" placeholder="Enter New Weight">
+<button onclick="updateProgress()">Update</button>
+
+<div id="progressOutput"></div>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

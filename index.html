@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Fitness System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+<h2>💪 AI Fitness</h2>
+<a href="dashboard.html">Dashboard</a>
+<a href="login.html" onclick="logout()">Logout</a>
+</nav>
+
+<div class="container">
+<h1>Generate Your Personalized Plan</h1>
+
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (cm)">
+
+<select id="goal">
+<option value="weight_loss">Weight Loss</option>
+<option value="muscle_gain">Muscle Gain</option>
+<option value="maintenance">Maintenance</option>
+</select>
+
+<select id="condition">
+<option value="none">No Condition</option>
+<option value="diabetes">Diabetes</option>
+<option value="hypertension">Hypertension</option>
+</select>
+
+<button onclick="generatePlan()">Generate Plan</button>
+
+<div id="result"></div>
+
+</div>
+
+<script src="js/ai.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
+
