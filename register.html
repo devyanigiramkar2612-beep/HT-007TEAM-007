@@ -1,23 +1,140 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Register</title>
-<link rel="stylesheet" href="css/style.css">
+    <title>Health & Fitness Registration</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ff9966, #ff5e62);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            width:420px;
+            background:white;
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .image-section{
+            background:url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74") no-repeat center;
+            background-size:cover;
+            height:160px;
+        }
+
+        .form-section{
+            padding:25px;
+        }
+
+        h2{
+            text-align:center;
+            color:#ff5e62;
+            margin-bottom:20px;
+        }
+
+        input, select{
+            width:100%;
+            padding:12px;
+            margin:8px 0;
+            border-radius:8px;
+            border:none;
+            font-size:14px;
+        }
+
+        input[type="text"]{
+            background:#fce4ec;
+        }
+
+        input[type="email"]{
+            background:#e3f2fd;
+        }
+
+        input[type="password"]{
+            background:#f3e5f5;
+        }
+
+        input[type="number"]{
+            background:#e8f5e9;
+        }
+
+        select{
+            background:#fff3e0;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#ff5e62;
+            color:white;
+            font-weight:bold;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            transition:0.3s;
+            margin-top:10px;
+        }
+
+        button:hover{
+            background:#ff9966;
+            transform:scale(1.05);
+        }
+
+        p{
+            text-align:center;
+            margin-top:10px;
+            font-size:14px;
+        }
+
+        a{
+            color:#ff5e62;
+            text-decoration:none;
+            font-weight:bold;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="form-box">
-<h2>Create Account</h2>
+<div class="container">
 
-<input type="text" id="regName" placeholder="Full Name">
-<input type="email" id="regEmail" placeholder="Email">
-<input type="password" id="regPass" placeholder="Password">
+    <div class="image-section"></div>
 
-<button onclick="register()">Register</button>
-<p>Already have account? <a href="login.html">Login</a></p>
+    <div class="form-section">
+        <h2>💪 Fitness Registration</h2>
+
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+        <input type="password" placeholder="Password">
+        <input type="number" placeholder="Age">
+        <input type="number" placeholder="Weight (kg)">
+        <input type="number" placeholder="Height (cm)">
+
+        <select>
+            <option>Select Fitness Goal</option>
+            <option>Weight Loss</option>
+            <option>Muscle Gain</option>
+            <option>Maintenance</option>
+        </select>
+
+        <select>
+            <option>Select Health Condition</option>
+            <option>None</option>
+            <option>Diabetes</option>
+            <option>Hypertension</option>
+        </select>
+
+        <button>Register</button>
+
+        <p>Already have account? <a href="#">Login</a></p>
+    </div>
 
 </div>
 
-<script src="js/auth.js"></script>
 </body>
 </html>
