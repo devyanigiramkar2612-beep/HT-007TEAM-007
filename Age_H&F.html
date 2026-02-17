@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Age - Health & Fitness</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ffafbd, #ffc3a0);
+}
+
+header{
+    text-align:center;
+    padding:25px;
+    background-color:#d63384;
+    color:white;
+    font-size:30px;
+}
+
+.container{
+    width:50%;
+    margin:60px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+h2{
+    color:#d63384;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:15px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#ff4d6d;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#d63384;
+}
+
+.result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:#d63384;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#d63384;
+    color:white;
+    margin-top:40px;
+}
+</style>
+
+<script>
+function checkAge(){
+    var age = document.getElementById("age").value;
+    var message = "";
+
+    if(age == ""){
+        message = "Please enter your age.";
+    }
+    else if(age <= 12){
+        message = "Child: Focus on basic physical activity, outdoor games, and balanced nutrition.";
+    }
+    else if(age <= 19){
+        message = "Teenager: Include strength training, sports, and protein-rich diet.";
+    }
+    else if(age <= 40){
+        message = "Adult: Maintain balanced workout routine with cardio and strength training.";
+    }
+    else if(age <= 60){
+        message = "Middle Age: Focus on flexibility, heart health, and light strength training.";
+    }
+    else{
+        message = "Senior: Light exercises like walking and yoga are recommended.";
+    }
+
+    document.getElementById("result").innerHTML = message;
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+🎂 Age Information - Health & Fitness 💪
+</header>
+
+<div class="container">
+
+<h2>Enter Your Age</h2>
+
+<input type="number" id="age" placeholder="Enter your age">
+
+<button onclick="checkAge()">Check Recommendation</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
+<footer>
+© 2026 Health & Fitness Project | Designed by Student
+</footer>
+
+</body>
+</html>
