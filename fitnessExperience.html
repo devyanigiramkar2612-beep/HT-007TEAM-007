@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fitness Experience Level</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background-color:#004080;
+    color:white;
+    font-size:28px;
+}
+
+.container{
+    width:80%;
+    margin:40px auto;
+    display:flex;
+    justify-content:space-between;
+}
+
+.card{
+    background:white;
+    width:30%;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 8px 15px rgba(0,0,0,0.3);
+    text-align:center;
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+    background:#f0f8ff;
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    border-radius:10px;
+    object-fit:cover;
+}
+
+h2{
+    color:#004080;
+}
+
+button{
+    margin-top:15px;
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#0072ff;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#004080;
+}
+
+footer{
+    text-align:center;
+    padding:10px;
+    background:#004080;
+    color:white;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+🏋️ Select Your Fitness Experience Level 💪
+</header>
+
+<div class="container">
+
+    <!-- Beginner -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Beginner Fitness">
+        <h2>Beginner</h2>
+        <p>
+        Perfect for those starting their fitness journey.
+        Focus on basic exercises, light workouts, and building consistency.
+        </p>
+        <button>Select Beginner</button>
+    </div>
+
+    <!-- Intermediate -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Intermediate Fitness">
+        <h2>Intermediate</h2>
+        <p>
+        Suitable for people with some workout experience.
+        Includes strength training, cardio routines, and balanced diet plans.
+        </p>
+        <button>Select Intermediate</button>
+    </div>
+
+    <!-- Advanced -->
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e" alt="Advanced Fitness">
+        <h2>Advanced</h2>
+        <p>
+        Designed for experienced fitness enthusiasts.
+        High-intensity workouts, muscle building, and performance training.
+        </p>
+        <button>Select Advanced</button>
+    </div>
+
+</div>
+
+<footer>
+© 2026 Health & Fitness Project | Designed by Student
+</footer>
+
+</body>
+</html>
