@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Health & Fitness Tracker</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background-color:#f4f9f9;
+}
+
+header{
+    background:linear-gradient(to right,#00b09b,#96c93d);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+section{
+    background:white;
+    margin:20px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#00b09b;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:8px;
+    margin:5px 0 15px 0;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#00b09b;
+    color:white;
+    padding:10px 20px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#028f7a;
+}
+
+img{
+    width:100%;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+footer{
+    background:#00b09b;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+</style>
+
+<script>
+function calculateBMI(){
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value / 100;
+    var bmi = weight / (height * height);
+    document.getElementById("result").innerHTML = 
+    "Your BMI is: " + bmi.toFixed(2);
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Personalized Health & Fitness Tracker</h1>
+    <p>Track your health details and fitness progress</p>
+</header>
+
+<!-- Personal Details Section -->
+<section>
+<h2>1. Personal Information</h2>
+
+<label>Full Name:</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Age:</label>
+<input type="number" placeholder="Enter your age">
+
+<label>Gender:</label>
+<select>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74" alt="Fitness Image">
+</section>
+
+<!-- Height & Weight Section -->
+<section>
+<h2>2. Height & Weight Details</h2>
+
+<label>Height (cm):</label>
+<input type="number" id="height" placeholder="Enter height in cm">
+
+<label>Weight (kg):</label>
+<input type="number" id="weight" placeholder="Enter weight in kg">
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<p id="result"></p>
+
+<p><b>BMI Categories:</b></p>
+<ul>
+<li>Underweight: Less than 18.5</li>
+<li>Normal: 18.5 – 24.9</li>
+<li>Overweight: 25 – 29.9</li>
+<li>Obese: 30 or more</li>
+</ul>
+
+<img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b" alt="Workout">
+</section>
+
+<!-- Health Conditions Section -->
+<section>
+<h2>3. Health Conditions / Physical Limitations</h2>
+
+<label>Select any existing condition:</label>
+<select>
+<option>None</option>
+<option>Diabetes</option>
+<option>High Blood Pressure</option>
+<option>Asthma</option>
+<option>Heart Disease</option>
+<option>Back Pain</option>
+<option>Joint Pain</option>
+</select>
+
+<label>Additional Notes:</label>
+<textarea rows="4" placeholder="Describe any injury or limitation"></textarea>
+
+<p>This helps in designing a safe workout and diet plan.</p>
+</section>
+
+<!-- Equipment Access Section -->
+<section>
+<h2>4. Equipment Access</h2>
+
+<label>Select your access:</label>
+<select>
+<option>No Equipment (Home Workout)</option>
+<option>Basic Equipment (Dumbbells, Yoga Mat)</option>
+<option>Full Gym Access</option>
+</select>
+
+<p>Workout recommendations will vary based on your equipment availability.</p>
+
+<img src="https://images.unsplash.com/photo-1518611012118-fdd1f1f3b2f3" alt="Gym">
+</section>
+
+<!-- Dietary Preference Section -->
+<section>
+<h2>5. Dietary Preference</h2>
+
+<label>Select your diet type:</label>
+<select>
+<option>Vegetarian</option>
+<option>Vegan</option>
+<option>Non-Vegetarian</option>
+<option>Eggetarian</option>
+<option>Keto</option>
+</select>
+
+<label>Food Allergies:</label>
+<input type="text" placeholder="Mention allergies if any">
+
+<p>This helps in preparing a customized nutrition plan.</p>
+
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="Healthy Food">
+</section>
+
+<!-- Progress Feedback Section -->
+<section>
+<h2>6. Weekly Progress Feedback</h2>
+
+<label>Current Weekly Weight (kg):</label>
+<input type="number">
+
+<label>Workout Difficulty Level:</label>
+<select>
+<option>Easy</option>
+<option>Moderate</option>
+<option>Hard</option>
+</select>
+
+<label>Workout Adherence:</label>
+<select>
+<option>Completed All Workouts</option>
+<option>Missed 1-2 Days</option>
+<option>Missed More Than 3 Days</option>
+</select>
+
+<label>Performance Feedback:</label>
+<textarea rows="4" placeholder="How do you feel about your performance?"></textarea>
+
+<p>Tracking weekly progress helps measure improvement and maintain motivation.</p>
+</section>
+
+<footer>
+    <p>© 2026 Health & Fitness Tracker | Stay Fit Stay Healthy</p>
+</footer>
+
+</body>
+</html>
