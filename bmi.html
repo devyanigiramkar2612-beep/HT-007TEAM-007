@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Height & Weight - BMI Calculator</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00b4db, #0083b0);
+}
+
+header{
+    text-align:center;
+    padding:25px;
+    background-color:#004e64;
+    color:white;
+    font-size:30px;
+}
+
+.container{
+    width:50%;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+    text-align:center;
+}
+
+h2{
+    color:#004e64;
+}
+
+label{
+    font-size:18px;
+    font-weight:bold;
+}
+
+input{
+    width:90%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    width:95%;
+    padding:12px;
+    border:none;
+    border-radius:25px;
+    background:#00b4db;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#004e64;
+}
+
+.result{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+    color:#004e64;
+}
+
+.info{
+    margin-top:20px;
+    text-align:left;
+    font-size:15px;
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:#004e64;
+    color:white;
+    margin-top:40px;
+}
+</style>
+
+<script>
+function calculateBMI() {
+    var height = document.getElementById("height").value;
+    var weight = document.getElementById("weight").value;
+
+    if(height == "" || weight == ""){
+        document.getElementById("result").innerHTML = "Please enter both height and weight.";
+        return;
+    }
+
+    var heightInMeter = height / 100;
+    var bmi = weight / (heightInMeter * heightInMeter);
+    bmi = bmi.toFixed(2);
+
+    var category = "";
+
+    if (bmi < 18.5) {
+        category = "Underweight";
+    } else if (bmi >= 18.5 && bmi < 24.9) {
+        category = "Normal Weight";
+    } else if (bmi >= 25 && bmi < 29.9) {
+        category = "Overweight";
+    } else {
+        category = "Obese";
+    }
+
+    document.getElementById("result").innerHTML =
+    "Your BMI is: " + bmi + "<br>Category: " + category;
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+📏 Height & Weight - BMI Calculator 💪
+</header>
+
+<div class="container">
+
+<h2>Enter Your Details</h2>
+
+<label>Height (in cm)</label><br>
+<input type="number" id="height" placeholder="Enter height in cm"><br>
+
+<label>Weight (in kg)</label><br>
+<input type="number" id="weight" placeholder="Enter weight in kg"><br>
+
+<button onclick="calculateBMI()">Calculate BMI</button>
+
+<div class="result" id="result"></div>
+
+<div class="info">
+<h3>BMI Categories:</h3>
+<ul>
+<li>Below 18.5 – Underweight</li>
+<li>18.5 – 24.9 – Normal Weight</li>
+<li>25 – 29.9 – Overweight</li>
+<li>30 and above – Obese</li>
+</ul>
+</div>
+
+</div>
+
+<footer>
+© 2026 Health & Fitness Project | Designed by Student
+</footer>
+
+</body>
+</html>
