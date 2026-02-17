@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced Weekly Progress Feedback</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:linear-gradient(to right,#00c6ff,#0072ff);
+}
+
+header{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+.container{
+    width:70%;
+    margin:30px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+h2{
+    color:#0072ff;
+    margin-top:25px;
+}
+
+label{
+    font-weight:bold;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0 15px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button{
+    background:#0072ff;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#0048b5;
+}
+
+.info{
+    background:#f0f8ff;
+    padding:15px;
+    border-left:6px solid #0072ff;
+    margin-bottom:20px;
+    border-radius:6px;
+}
+
+.tips{
+    background:#fff8e1;
+    padding:15px;
+    border-left:6px solid orange;
+    border-radius:6px;
+    margin-top:20px;
+}
+
+img{
+    width:100%;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+</style>
+
+<script>
+function submitProgress(){
+    alert("Great job! Your weekly progress has been recorded. Keep going!");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+<h1>Weekly Fitness Progress & Performance Tracker</h1>
+<p>Analyze • Improve • Achieve Your Goals</p>
+</header>
+
+<div class="container">
+
+<div class="info">
+<b>Why Weekly Progress Tracking Matters?</b><br><br>
+• Helps monitor weight changes and body composition<br>
+• Tracks stamina, strength, and endurance improvement<br>
+• Identifies if workouts are too easy or too difficult<br>
+• Measures consistency (Adherence)<br>
+• Improves motivation and goal achievement<br>
+</div>
+
+<img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b" alt="Fitness Training">
+
+<h2>1. Weekly Weight Monitoring</h2>
+
+<label>Current Week Weight (kg):</label>
+<input type="number" placeholder="Enter current weight">
+
+<label>Previous Week Weight (kg):</label>
+<input type="number" placeholder="Enter previous weight">
+
+<label>Target Weight (kg):</label>
+<input type="number" placeholder="Enter your goal weight">
+
+<h2>2. Workout Performance Analysis</h2>
+
+<label>Energy Level This Week:</label>
+<select>
+<option>Very High</option>
+<option>High</option>
+<option>Moderate</option>
+<option>Low</option>
+</select>
+
+<label>Strength Improvement:</label>
+<select>
+<option>Significant Increase</option>
+<option>Slight Increase</option>
+<option>No Change</option>
+<option>Decreased</option>
+</select>
+
+<label>Total Workouts Completed:</label>
+<input type="number" placeholder="Example: 5">
+
+<img src="https://images.unsplash.com/photo-1518611012118-fdd1f1f3b2f3" alt="Gym Workout">
+
+<h2>3. Workout Difficulty Level</h2>
+
+<label>How difficult were your workouts?</label>
+<select>
+<option>Too Easy</option>
+<option>Comfortable</option>
+<option>Challenging</option>
+<option>Very Hard</option>
+</select>
+
+<label>Should next week's workout be:</label>
+<select>
+<option>Increase Intensity</option>
+<option>Maintain Same Level</option>
+<option>Reduce Intensity</option>
+</select>
+
+<h2>4. Adherence & Consistency</h2>
+
+<label>Workout Plan Followed?</label>
+<select>
+<option>100% Followed</option>
+<option>Missed 1-2 Days</option>
+<option>Missed More Than 3 Days</option>
+<option>Did Not Follow</option>
+</select>
+
+<label>Diet Plan Followed?</label>
+<select>
+<option>Strictly Followed</option>
+<option>Mostly Followed</option>
+<option>Sometimes Followed</option>
+<option>Not Followed</option>
+</select>
+
+<h2>5. Mood & Recovery Status</h2>
+
+<label>Sleep Quality:</label>
+<select>
+<option>Excellent (7-9 hours)</option>
+<option>Average (5-6 hours)</option>
+<option>Poor (Less than 5 hours)</option>
+</select>
+
+<label>Muscle Soreness Level:</label>
+<select>
+<option>No Soreness</option>
+<option>Mild</option>
+<option>Moderate</option>
+<option>Severe</option>
+</select>
+
+<h2>6. Personal Feedback</h2>
+
+<label>Challenges Faced This Week:</label>
+<textarea rows="3" placeholder="Mention any challenges"></textarea>
+
+<label>Achievements This Week:</label>
+<textarea rows="3" placeholder="Mention your achievements"></textarea>
+
+<button onclick="submitProgress()">Submit Weekly Report</button>
+
+<div class="tips">
+<b>Improvement Tips:</b><br><br>
+✔ Stay hydrated daily<br>
+✔ Get at least 7 hours of sleep<br>
+✔ Maintain protein intake<br>
+✔ Avoid skipping workouts<br>
+✔ Track progress every week<br>
+</div>
+
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="Healthy Lifestyle">
+
+</div>
+
+<footer>
+© 2026 Health & Fitness Progress Tracker | Stay Consistent, Stay Strong
+</footer>
+
+</body>
+</html>
